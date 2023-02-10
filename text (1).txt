@@ -1,3 +1,53 @@
-vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIndpZmkgdWsgMjAyMy0wMi0xNyIsDQogICJhZGQiOiAiODAuOTQuODMuODIiLA0KICAicG9ydCI6ICIyMDg3IiwNCiAgImlkIjogImU2ZTVjNmMwLWE5NDgtMTFlZC1iOTM1LTIwNWM2ZDVmNWQ3OCIsDQogICJhaWQiOiAiMCIsDQogICJzY3kiOiAiYXV0byIsDQogICJuZXQiOiAid3MiLA0KICAidHlwZSI6ICJub25lIiwNCiAgImhvc3QiOiAic3VwZXItZGV3LWFkNmYuZWJyZmE5MC53b3JrZXJzLmRldiIsDQogICJwYXRoIjogIi9vMWFqZnd1ZCIsDQogICJ0bHMiOiAidGxzIiwNCiAgInNuaSI6ICJzdXBlci1kZXctYWQ2Zi5lYnJmYTkwLndvcmtlcnMuZGV2IiwNCiAgImFscG4iOiAiaHR0cC8xLjEiDQp9
-vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogImhhbXJhaCB1ayAyMDIzLTAyLTE3LSIsDQogICJhZGQiOiAiY2RuanMuY29tIiwNCiAgInBvcnQiOiAiMjA4NyIsDQogICJpZCI6ICJlNmU1YzZjMC1hOTQ4LTExZWQtYjkzNS0yMDVjNmQ1ZjVkNzgiLA0KICAiYWlkIjogIjAiLA0KICAic2N5IjogImF1dG8iLA0KICAibmV0IjogIndzIiwNCiAgInR5cGUiOiAibm9uZSIsDQogICJob3N0IjogInN1cGVyLWRldy1hZDZmLmVicmZhOTAud29ya2Vycy5kZXYiLA0KICAicGF0aCI6ICIvbzFhamZ3dWQiLA0KICAidGxzIjogInRscyIsDQogICJzbmkiOiAic3VwZXItZGV3LWFkNmYuZWJyZmE5MC53b3JrZXJzLmRldiIsDQogICJhbHBuIjogImh0dHAvMS4xIg0KfQ==
-vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogImhhbXJhaCBGcmFuY2UgMSAyMDIzLTAyLTE3IiwNCiAgImFkZCI6ICJjZG5qcy5jb20iLA0KICAicG9ydCI6ICI0NDMiLA0KICAiaWQiOiAiN2E2ODc3YjAtYTk0OS0xMWVkLWI1MzYtMjA1YzZkNWY1ZDc4IiwNCiAgImFpZCI6ICIwIiwNCiAgInNjeSI6ICJhdXRvIiwNCiAgIm5ldCI6ICJ3cyIsDQogICJ0eXBlIjogIm5vbmUiLA0KICAiaG9zdCI6ICJ3ZWF0aGVyZWQtZGF3bi1jZjhkLmVicmZhOTAud29ya2Vycy5kZXYiLA0KICAicGF0aCI6ICIvYW56Zjdxa2kiLA0KICAidGxzIjogInRscyIsDQogICJzbmkiOiAid2VhdGhlcmVkLWRhd24tY2Y4ZC5lYnJmYTkwLndvcmtlcnMuZGV2IiwNCiAgImFscG4iOiAiaHR0cC8xLjEiDQp9
+
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+bind-address: "*"
+ipv6: false
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7894
+  fallback-filter:
+    geoip: false
+    ipcidr:
+    - 240.0.0.0/4
+  nameserver:
+    - https://puredns.org/dns-query
+    - tls://puredns.org:853
+  fallback:
+    - tcp://108.137.44.39
+    - tcp://108.137.44.9
+    - 108.137.44.39
+    - 108.137.44.9
+tun:
+  enable: true
+  stack: system 
+  macOS-auto-route: true
+  macOS-auto-detect-interface: true
+  dns-hijack:
+    - tcp://108.137.44.39:53
+experimental:
+  interface-name: en0
+
+proxies:
+  - {name: wifi uk 2023-02-17, server: 80.94.83.82, port: 2087, type: vmess, uuid: e6e5c6c0-a948-11ed-b935-205c6d5f5d78, sni: super-dew-ad6f.ebrfa90.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /o1ajfwud, headers: {Host: super-dew-ad6f.ebrfa90.workers.dev}}}
+  - {name: hamrah uk 2023-02-17-, server: cdnjs.com, port: 2087, type: vmess, uuid: e6e5c6c0-a948-11ed-b935-205c6d5f5d78, sni: super-dew-ad6f.ebrfa90.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /o1ajfwud, headers: {Host: super-dew-ad6f.ebrfa90.workers.dev}}}
+  - {name: hamrah France 1 2023-02-17, server: cdnjs.com, port: 443, type: vmess, uuid: 7a6877b0-a949-11ed-b536-205c6d5f5d78, sni: weathered-dawn-cf8d.ebrfa90.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /anzf7qki, headers: {Host: weathered-dawn-cf8d.ebrfa90.workers.dev}}}
+
+proxy-groups:
+  - name: sshkit-generator
+    type: select
+    proxies:
+      - wifi uk 2023-02-17
+      - hamrah uk 2023-02-17-
+      - hamrah France 1 2023-02-17
+
+rules:
+ - MATCH,sshkit-generator
