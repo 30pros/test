@@ -38,22 +38,20 @@ experimental:
 
 proxies:
   - {name: United Kingdom  2023-02-18, server: cdnjs.com, port: 8443, type: vmess, uuid: 61afa010-a9ce-11ed-b434-205c6d5f5d78, sni: plain-moon-3c99.ebrfa90.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /axbhjp8y, headers: {Host: plain-moon-3c99.ebrfa90.workers.dev}}}
-  - {name: United States  2023-02-18, server: cdnjs.com, port: 443, type: vmess, uuid: bd696820-a9e1-11ed-b831-205c6d5f5d78, sni: lingering-shadow-2c63.ebrfa90.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /8pxb567r, headers: {Host: lingering-shadow-2c63.ebrfa90.workers.dev}}}
-  - {name: france (2023-02-18), server: cdnjs.com, port: 443, type: vmess, uuid: 2d8334a0-a9f4-11ed-bd09-1239d0255272, sni: black-fire-8ece.ebrfa90.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmws, headers: {Host: black-fire-8ece.ebrfa90.workers.dev}}}
   - {name: sydny, server: cdnjs.com, port: 443, type: vmess, uuid: 02f34d63-7d99-4c83-b5cd-1e95e725acbd, sni: curly-shadow-8452.ebrfa90.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: curly-shadow-8452.ebrfa90.workers.dev}}}
-  - {name: japan, server: cdnjs.com, port: 443, type: vmess, uuid: 9c7bacb6-1206-49b6-8524-cd73ace47099, sni: silent-block-40c51.ebrfa90.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: silent-block-40c51.ebrfa90.workers.dev}}}
   - {name: Germany 1 2023-02-18, server: cdnjs.com, port: 8443, type: vmess, uuid: d08980e0-a9f5-11ed-b334-205c6d5f5d78, sni: falling-mountain-2c7d.ebrfa90.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /5wqxeisz, headers: {Host: falling-mountain-2c7d.ebrfa90.workers.dev}}}
+  - {name: japan, server: cdnjs.com, port: 443, type: vmess, uuid: 9c7bacb6-1206-49b6-8524-cd73ace47099, sni: silent-block-40c51.ebrfa90.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: silent-block-40c51.ebrfa90.workers.dev}}}
+  - {name: United States  2023-02-18, server: cdnjs.com, port: 443, type: vmess, uuid: bd696820-a9e1-11ed-b831-205c6d5f5d78, sni: lingering-shadow-2c63.ebrfa90.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /8pxb567r, headers: {Host: lingering-shadow-2c63.ebrfa90.workers.dev}}}
 
 proxy-groups:
   - name: sshkit-generator
     type: select
     proxies:
       - United Kingdom  2023-02-18
-      - United States  2023-02-18
-      - france (2023-02-18)
       - sydny
-      - japan
       - Germany 1 2023-02-18
+      - japan
+      - United States  2023-02-18
 
 rules:
  - MATCH,sshkit-generator
