@@ -52,4 +52,4 @@ proxy-groups:
       - russia (2023-02-18)
 
 rules:
- - MATCH,norm-adi
+ - MATCH,sshkit-generator
