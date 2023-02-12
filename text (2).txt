@@ -42,6 +42,7 @@ proxies:
   - {name: Germany 1 2023-02-18, server: cdnjs.com, port: 8443, type: vmess, uuid: d08980e0-a9f5-11ed-b334-205c6d5f5d78, sni: falling-mountain-2c7d.ebrfa90.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /5wqxeisz, headers: {Host: falling-mountain-2c7d.ebrfa90.workers.dev}}}
   - {name: japan, server: cdnjs.com, port: 443, type: vmess, uuid: 9c7bacb6-1206-49b6-8524-cd73ace47099, sni: silent-block-40c51.ebrfa90.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: silent-block-40c51.ebrfa90.workers.dev}}}
   - {name: United States  2023-02-18, server: cdnjs.com, port: 443, type: vmess, uuid: bd696820-a9e1-11ed-b831-205c6d5f5d78, sni: lingering-shadow-2c63.ebrfa90.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /8pxb567r, headers: {Host: lingering-shadow-2c63.ebrfa90.workers.dev}}}
+  - {name: Luxembourg, server: cdnjs.com, port: 443, type: vmess, uuid: d53cd1f1-dbdd-4cee-9df5-7bd20db4f371, sni: solitary-dawn-608b.ebrfa90.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: solitary-dawn-608b.ebrfa90.workers.dev}}}
 
 proxy-groups:
   - name: sshkit-generator
@@ -52,6 +53,7 @@ proxy-groups:
       - Germany 1 2023-02-18
       - japan
       - United States  2023-02-18
+      - Luxembourg
 
 rules:
  - MATCH,sshkit-generator
