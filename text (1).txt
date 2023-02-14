@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：14-02-2023 13:14:47
+# 创建时间：14-02-2023 13:19:34
 # 使用模版：V2RaySE 默认模版
-# 节点数量：8
+# 节点数量：2
 ####################################
 mixed-port: 7890
 allow-lan: true
@@ -23,12 +23,6 @@ dns:
 proxies:
   - {"name":"united kingdom hamrah","type":"vmess","server":"cdnjs.com","port":443,"cipher":"auto","uuid":"43dbf977-187b-4d9a-a0df-86d6511d03d9","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"steep-bonus-1b25.freedomje7e.workers.dev","network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"steep-bonus-1b25.freedomje7e.workers.dev"}}}
   - {"name":"united kingdom wifi","type":"vmess","server":"160.153.0.45","port":443,"cipher":"auto","uuid":"43dbf977-187b-4d9a-a0df-86d6511d03d9","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"steep-bonus-1b25.freedomje7e.workers.dev","network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"steep-bonus-1b25.freedomje7e.workers.dev"}}}
-  - {"name":"Lithuania oce hamrah\r","type":"vless","server":"cdnjs.com","port":443,"uuid":"00324ae8-bfb1-484a-a467-c61070e66f2b","tls":true,"servername":"withered-river-4693.freedomje7e.workers.dev","network":"ws","ws-opts":{"path":"/vless","headers":{"host":"withered-river-4693.freedomje7e.workers.dev"}}}
-  - {"name":"Lithuania oce wifi\r","type":"vless","server":"160.153.0.45","port":443,"uuid":"00324ae8-bfb1-484a-a467-c61070e66f2b","tls":true,"servername":"withered-river-4693.freedomje7e.workers.dev","network":"ws","ws-opts":{"path":"/vless","headers":{"host":"withered-river-4693.freedomje7e.workers.dev"}}}
-  - {"name":"United Kingdom 2 hamrah\r","type":"vless","server":"cdnjs.com","port":443,"uuid":"a1de4659-488b-414f-bd82-3057686ea20e","tls":true,"servername":"snowy-star-9042.freedomje7e.workers.dev","network":"ws","ws-opts":{"path":"/vless","headers":{"host":"snowy-star-9042.freedomje7e.workers.dev"}}}
-  - {"name":"United Kingdom 2 wifi\r","type":"vless","server":"160.153.0.45","port":443,"uuid":"a1de4659-488b-414f-bd82-3057686ea20e","tls":true,"servername":"snowy-star-9042.freedomje7e.workers.dev","network":"ws","ws-opts":{"path":"/vless","headers":{"host":"snowy-star-9042.freedomje7e.workers.dev"}}}
-  - {"name":"germany hamrah\r","type":"vless","server":"cdnjs.com","port":443,"uuid":"6db9de40-ac3d-11ed-8df4-1239d0255272","tls":true,"servername":"winter-pond-7b5b.freedomje7e.workers.dev","network":"ws","ws-opts":{"path":"/vlws","headers":{"host":"winter-pond-7b5b.freedomje7e.workers.dev"}}}
-  - {"name":"germany wifi\r","type":"vless","server":"160.153.0.45","port":443,"uuid":"6db9de40-ac3d-11ed-8df4-1239d0255272","tls":true,"servername":"winter-pond-7b5b.freedomje7e.workers.dev","network":"ws","ws-opts":{"path":"/vlws","headers":{"host":"winter-pond-7b5b.freedomje7e.workers.dev"}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -37,12 +31,6 @@ proxy-groups:
       - DIRECT
       - united kingdom hamrah
       - united kingdom wifi
-      - "Lithuania oce hamrah\r"
-      - "Lithuania oce wifi\r"
-      - "United Kingdom 2 hamrah\r"
-      - "United Kingdom 2 wifi\r"
-      - "germany hamrah\r"
-      - "germany wifi\r"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -51,12 +39,6 @@ proxy-groups:
     proxies:
       - united kingdom hamrah
       - united kingdom wifi
-      - "Lithuania oce hamrah\r"
-      - "Lithuania oce wifi\r"
-      - "United Kingdom 2 hamrah\r"
-      - "United Kingdom 2 wifi\r"
-      - "germany hamrah\r"
-      - "germany wifi\r"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -65,12 +47,6 @@ proxy-groups:
       - 🎯 全球直连
       - united kingdom hamrah
       - united kingdom wifi
-      - "Lithuania oce hamrah\r"
-      - "Lithuania oce wifi\r"
-      - "United Kingdom 2 hamrah\r"
-      - "United Kingdom 2 wifi\r"
-      - "germany hamrah\r"
-      - "germany wifi\r"
   - name: 📲 电报信息
     type: select
     proxies:
@@ -78,12 +54,6 @@ proxy-groups:
       - 🎯 全球直连
       - united kingdom hamrah
       - united kingdom wifi
-      - "Lithuania oce hamrah\r"
-      - "Lithuania oce wifi\r"
-      - "United Kingdom 2 hamrah\r"
-      - "United Kingdom 2 wifi\r"
-      - "germany hamrah\r"
-      - "germany wifi\r"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -91,12 +61,6 @@ proxy-groups:
       - 🚀 节点选择
       - united kingdom hamrah
       - united kingdom wifi
-      - "Lithuania oce hamrah\r"
-      - "Lithuania oce wifi\r"
-      - "United Kingdom 2 hamrah\r"
-      - "United Kingdom 2 wifi\r"
-      - "germany hamrah\r"
-      - "germany wifi\r"
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -104,12 +68,6 @@ proxy-groups:
       - 🎯 全球直连
       - united kingdom hamrah
       - united kingdom wifi
-      - "Lithuania oce hamrah\r"
-      - "Lithuania oce wifi\r"
-      - "United Kingdom 2 hamrah\r"
-      - "United Kingdom 2 wifi\r"
-      - "germany hamrah\r"
-      - "germany wifi\r"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -134,12 +92,6 @@ proxy-groups:
       - ♻️ 自动选择
       - united kingdom hamrah
       - united kingdom wifi
-      - "Lithuania oce hamrah\r"
-      - "Lithuania oce wifi\r"
-      - "United Kingdom 2 hamrah\r"
-      - "United Kingdom 2 wifi\r"
-      - "germany hamrah\r"
-      - "germany wifi\r"
 
 rules:
 # 本地/局域网地址
