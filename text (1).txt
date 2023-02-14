@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：14-02-2023 13:19:34
+# 创建时间：14-02-2023 13:57:48
 # 使用模版：V2RaySE 默认模版
-# 节点数量：2
+# 节点数量：8
 ####################################
 mixed-port: 7890
 allow-lan: true
@@ -22,7 +22,13 @@ dns:
 
 proxies:
   - {"name":"united kingdom hamrah","type":"vmess","server":"cdnjs.com","port":443,"cipher":"auto","uuid":"43dbf977-187b-4d9a-a0df-86d6511d03d9","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"steep-bonus-1b25.freedomje7e.workers.dev","network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"steep-bonus-1b25.freedomje7e.workers.dev"}}}
-  - {"name":"united kingdom wifi","type":"vmess","server":"160.153.0.45","port":443,"cipher":"auto","uuid":"43dbf977-187b-4d9a-a0df-86d6511d03d9","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"steep-bonus-1b25.freedomje7e.workers.dev","network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"steep-bonus-1b25.freedomje7e.workers.dev"}}}
+  - {"name":"united kingdom wifi","type":"vmess","server":"195.137.167.140","port":443,"cipher":"auto","uuid":"43dbf977-187b-4d9a-a0df-86d6511d03d9","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"steep-bonus-1b25.freedomje7e.workers.dev","network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"steep-bonus-1b25.freedomje7e.workers.dev"}}}
+  - {"name":"United Kingdom 2 hamrah","type":"vmess","server":"cdnjs.com","port":443,"cipher":"auto","uuid":"004765a0-ac50-11ed-b138-205c6d5f5d78","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"weathered-hall-4821.freedomje7e.workers.dev","network":"ws","ws-opts":{"path":"/ad6c4xhk","headers":{"host":"weathered-hall-4821.freedomje7e.workers.dev"}}}
+  - {"name":"United Kingdom 2 wifi","type":"vmess","server":"160.153.0.45","port":443,"cipher":"auto","uuid":"004765a0-ac50-11ed-b138-205c6d5f5d78","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"weathered-hall-4821.freedomje7e.workers.dev","network":"ws","ws-opts":{"path":"/ad6c4xhk","headers":{"host":"weathered-hall-4821.freedomje7e.workers.dev"}}}
+  - {"name":"Netherlands hamrah","type":"vmess","server":"cdnjs.com","port":8080,"cipher":"auto","uuid":"8478f1d0-ac50-11ed-b739-205c6d5f5d78","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/jqa479mc","headers":{"host":"winter-bush-e725-oi9.freedomje7e.workers.dev"}}}
+  - {"name":"Netherlands wifi","type":"vmess","server":"160.153.0.45","port":2086,"cipher":"auto","uuid":"8478f1d0-ac50-11ed-b739-205c6d5f5d78","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/jqa479mc","headers":{"host":"winter-bush-e725-oi9.freedomje7e.workers.dev"}}}
+  - {"name":"Germany hamrah","type":"vmess","server":"cdnjs.com","port":443,"cipher":"auto","uuid":"364768e0-ac51-11ed-b830-205c6d5f5d78","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"shiny-pond-e805.freedomje7e.workers.dev","network":"ws","ws-opts":{"path":"/u1o8by3i","headers":{"host":"shiny-pond-e805.freedomje7e.workers.dev"}}}
+  - {"name":"Germany wifi","type":"vmess","server":"160.153.0.45","port":8443,"cipher":"auto","uuid":"364768e0-ac51-11ed-b830-205c6d5f5d78","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"shiny-pond-e805.freedomje7e.workers.dev","network":"ws","ws-opts":{"path":"/u1o8by3i","headers":{"host":"shiny-pond-e805.freedomje7e.workers.dev"}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -31,6 +37,12 @@ proxy-groups:
       - DIRECT
       - united kingdom hamrah
       - united kingdom wifi
+      - United Kingdom 2 hamrah
+      - United Kingdom 2 wifi
+      - Netherlands hamrah
+      - Netherlands wifi
+      - Germany hamrah
+      - Germany wifi
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -39,6 +51,12 @@ proxy-groups:
     proxies:
       - united kingdom hamrah
       - united kingdom wifi
+      - United Kingdom 2 hamrah
+      - United Kingdom 2 wifi
+      - Netherlands hamrah
+      - Netherlands wifi
+      - Germany hamrah
+      - Germany wifi
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -47,6 +65,12 @@ proxy-groups:
       - 🎯 全球直连
       - united kingdom hamrah
       - united kingdom wifi
+      - United Kingdom 2 hamrah
+      - United Kingdom 2 wifi
+      - Netherlands hamrah
+      - Netherlands wifi
+      - Germany hamrah
+      - Germany wifi
   - name: 📲 电报信息
     type: select
     proxies:
@@ -54,6 +78,12 @@ proxy-groups:
       - 🎯 全球直连
       - united kingdom hamrah
       - united kingdom wifi
+      - United Kingdom 2 hamrah
+      - United Kingdom 2 wifi
+      - Netherlands hamrah
+      - Netherlands wifi
+      - Germany hamrah
+      - Germany wifi
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -61,6 +91,12 @@ proxy-groups:
       - 🚀 节点选择
       - united kingdom hamrah
       - united kingdom wifi
+      - United Kingdom 2 hamrah
+      - United Kingdom 2 wifi
+      - Netherlands hamrah
+      - Netherlands wifi
+      - Germany hamrah
+      - Germany wifi
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -68,6 +104,12 @@ proxy-groups:
       - 🎯 全球直连
       - united kingdom hamrah
       - united kingdom wifi
+      - United Kingdom 2 hamrah
+      - United Kingdom 2 wifi
+      - Netherlands hamrah
+      - Netherlands wifi
+      - Germany hamrah
+      - Germany wifi
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -92,6 +134,12 @@ proxy-groups:
       - ♻️ 自动选择
       - united kingdom hamrah
       - united kingdom wifi
+      - United Kingdom 2 hamrah
+      - United Kingdom 2 wifi
+      - Netherlands hamrah
+      - Netherlands wifi
+      - Germany hamrah
+      - Germany wifi
 
 rules:
 # 本地/局域网地址
