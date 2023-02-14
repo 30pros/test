@@ -37,23 +37,19 @@ experimental:
   interface-name: en0
 
 proxies:
-  - {name: United Kingdom  2023-02-18, server: cdnjs.com, port: 8443, type: vmess, uuid: 61afa010-a9ce-11ed-b434-205c6d5f5d78, sni: plain-moon-3c99.ebrfa90.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /axbhjp8y, headers: {Host: plain-moon-3c99.ebrfa90.workers.dev}}}
-  - {name: sydny, server: cdnjs.com, port: 443, type: vmess, uuid: 02f34d63-7d99-4c83-b5cd-1e95e725acbd, sni: curly-shadow-8452.ebrfa90.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: curly-shadow-8452.ebrfa90.workers.dev}}}
-  - {name: Germany 1 2023-02-18, server: cdnjs.com, port: 8443, type: vmess, uuid: d08980e0-a9f5-11ed-b334-205c6d5f5d78, sni: falling-mountain-2c7d.ebrfa90.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /5wqxeisz, headers: {Host: falling-mountain-2c7d.ebrfa90.workers.dev}}}
-  - {name: japan, server: cdnjs.com, port: 443, type: vmess, uuid: 9c7bacb6-1206-49b6-8524-cd73ace47099, sni: silent-block-40c51.ebrfa90.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: silent-block-40c51.ebrfa90.workers.dev}}}
-  - {name: United States  2023-02-18, server: cdnjs.com, port: 443, type: vmess, uuid: bd696820-a9e1-11ed-b831-205c6d5f5d78, sni: lingering-shadow-2c63.ebrfa90.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /8pxb567r, headers: {Host: lingering-shadow-2c63.ebrfa90.workers.dev}}}
-  - {name: Luxembourg, server: cdnjs.com, port: 443, type: vmess, uuid: d53cd1f1-dbdd-4cee-9df5-7bd20db4f371, sni: solitary-dawn-608b.ebrfa90.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: solitary-dawn-608b.ebrfa90.workers.dev}}}
+  - {name: united kingdom, server: cdnjs.com, port: 443, type: vmess, uuid: 97be993c-f691-45d1-a41e-feb647ebcb6c, sni: floral-thunder-9158.freedomje7e.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: floral-thunder-9158.freedomje7e.workers.dev}}}
+  - {name: FR vmess, server: cdnjs.com, port: 443, type: vmess, uuid: 410aee20-ac39-11ed-a9d4-1239d0255272, sni: cold-firefly-a2cc.freedomje7e.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmws, headers: {Host: cold-firefly-a2cc.freedomje7e.workers.dev}}}
+  - {name: united kingdom 2, server: cdnjs.com, port: 443, type: vmess, uuid: 427f26ae-9b74-430f-aba5-3b9222c8874f, sni: wandering-feather-8dee.freedomje7e.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: wandering-feather-8dee.freedomje7e.workers.dev}}}
+  - {name: Germany 1, server: cdnjs.com, port: 443, type: vmess, uuid: 06529d00-ac3b-11ed-b834-205c6d5f5d78, sni: lucky-waterfall-55fa.freedomje7e.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /p93itcda, headers: {Host: lucky-waterfall-55fa.freedomje7e.workers.dev}}}
 
 proxy-groups:
   - name: sshkit-generator
     type: select
     proxies:
-      - United Kingdom  2023-02-18
-      - sydny
-      - Germany 1 2023-02-18
-      - japan
-      - United States  2023-02-18
-      - Luxembourg
+      - united kingdom
+      - FR vmess
+      - united kingdom 2
+      - Germany 1
 
 rules:
  - MATCH,sshkit-generator
