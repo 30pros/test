@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：15-02-2023 14:04:41
+# 创建时间：15-02-2023 21:35:17
 # 使用模版：V2RaySE 默认模版
-# 节点数量：1
+# 节点数量：5
 ####################################
 mixed-port: 7890
 allow-lan: true
@@ -21,46 +21,74 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - {"name":"443 Vmess United Kingdom  2023-02-22","type":"vmess","server":"160.153.0.45","port":443,"cipher":"auto","uuid":"d083e080-ad1b-11ed-b335-205c6d5f5d78","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"wild-wood-6952.newcloudf335.workers.dev","network":"ws","ws-opts":{"path":"/rx5d4obh","headers":{"host":"wild-wood-6952.newcloudf335.workers.dev"}}}
+  - {"name":"nl hamrah","type":"vmess","server":"172.67.173.61","port":443,"cipher":"none","uuid":"022e3110-ad59-11ed-89b0-1239d0255272","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"lucky-math-8db1.newcloudf335.workers.dev","network":"ws","ws-opts":{"path":"/vmws","headers":{"host":"lucky-math-8db1.newcloudf335.workers.dev"}}}
+  - {"name":"Germany wifi","type":"vmess","server":"160.153.0.45","port":443,"cipher":"auto","uuid":"034244d0-ad5a-11ed-b238-205c6d5f5d78","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"nameless-voice-5950.newcloudf335.workers.dev","network":"ws","ws-opts":{"path":"/4vxibl1s","headers":{"host":"nameless-voice-5950.newcloudf335.workers.dev"}}}
+  - {"name":"Germany hamrah","type":"vmess","server":"172.67.173.61","port":443,"cipher":"auto","uuid":"034244d0-ad5a-11ed-b238-205c6d5f5d78","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"nameless-voice-5950.newcloudf335.workers.dev","network":"ws","ws-opts":{"path":"/4vxibl1s","headers":{"host":"nameless-voice-5950.newcloudf335.workers.dev"}}}
+  - {"name":"uk hamrah","type":"vmess","server":"172.67.173.61","port":443,"cipher":"auto","uuid":"9ad018d4-10d6-4582-a41e-e3d56fa2ba47","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"wispy-sun-c00d.newcloudf335.workers.dev","network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"wispy-sun-c00d.newcloudf335.workers.dev"}}}
+  - {"name":"uk wifi","type":"vmess","server":"160.153.0.45","port":443,"cipher":"auto","uuid":"9ad018d4-10d6-4582-a41e-e3d56fa2ba47","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"wispy-sun-c00d.newcloudf335.workers.dev","network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"wispy-sun-c00d.newcloudf335.workers.dev"}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 443 Vmess United Kingdom  2023-02-22
+      - nl hamrah
+      - Germany wifi
+      - Germany hamrah
+      - uk hamrah
+      - uk wifi
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 443 Vmess United Kingdom  2023-02-22
+      - nl hamrah
+      - Germany wifi
+      - Germany hamrah
+      - uk hamrah
+      - uk wifi
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 443 Vmess United Kingdom  2023-02-22
+      - nl hamrah
+      - Germany wifi
+      - Germany hamrah
+      - uk hamrah
+      - uk wifi
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 443 Vmess United Kingdom  2023-02-22
+      - nl hamrah
+      - Germany wifi
+      - Germany hamrah
+      - uk hamrah
+      - uk wifi
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 443 Vmess United Kingdom  2023-02-22
+      - nl hamrah
+      - Germany wifi
+      - Germany hamrah
+      - uk hamrah
+      - uk wifi
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 443 Vmess United Kingdom  2023-02-22
+      - nl hamrah
+      - Germany wifi
+      - Germany hamrah
+      - uk hamrah
+      - uk wifi
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -83,7 +111,11 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 443 Vmess United Kingdom  2023-02-22
+      - nl hamrah
+      - Germany wifi
+      - Germany hamrah
+      - uk hamrah
+      - uk wifi
 
 rules:
 # 本地/局域网地址
