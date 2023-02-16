@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：14-02-2023 22:36:40
+# 创建时间：16-02-2023 11:33:30
 # 使用模版：V2RaySE 默认模版
-# 节点数量：2
+# 节点数量：3
 ####################################
 mixed-port: 7890
 allow-lan: true
@@ -21,53 +21,60 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - {"name":"FR f","type":"vmess","server":"cdnjs.com","port":443,"cipher":"none","uuid":"9f50a400-ac90-11ed-9c89-1239d0255272","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"broad-field-bf88.freedomje7e.workers.dev","network":"ws","ws-opts":{"path":"/vmws","headers":{"host":"broad-field-bf88.freedomje7e.workers.dev"}}}
-  - {"name":"United States f","type":"vmess","server":"cdnjs.com","port":443,"cipher":"auto","uuid":"68d39c00-ac9a-11ed-b237-205c6d5f5d78","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"plain-snow-5a07.freedomje7e.workers.dev","network":"ws","ws-opts":{"path":"/r9t3cmu0","headers":{"host":"plain-snow-5a07.freedomje7e.workers.dev"}}}
+  - {"name":"uk f,m","type":"vmess","server":"billowing-frog-b3c6.unknermine.workers.dev","port":443,"cipher":"auto","uuid":"28cf765f-6b7c-45b0-aa64-f021c901ea01","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"blue-fire-4f12.cloudf335.workers.dev","network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"blue-fire-4f12.cloudf335.workers.dev"}}}
+  - {"name":"nl f.m","type":"vmess","server":"billowing-frog-b3c6.unknermine.workers.dev","port":443,"cipher":"auto","uuid":"1a9c943c-46dc-4ebb-96d2-02e21929bc23","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"small-salad-d599.cloudf335.workers.dev","network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"small-salad-d599.cloudf335.workers.dev"}}}
+  - {"name":"nl 2 f.m","type":"vmess","server":"billowing-frog-b3c6.unknermine.workers.dev","port":443,"cipher":"auto","uuid":"1eecacc0-add0-11ed-b233-205c6d5f5d78","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"tiny-flower-3ed0.cloudf335.workers.dev","network":"ws","ws-opts":{"path":"/i8o3ng25","headers":{"host":"tiny-flower-3ed0.cloudf335.workers.dev"}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - FR f
-      - United States f
+      - uk f,m
+      - nl f.m
+      - nl 2 f.m
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - FR f
-      - United States f
+      - uk f,m
+      - nl f.m
+      - nl 2 f.m
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - FR f
-      - United States f
+      - uk f,m
+      - nl f.m
+      - nl 2 f.m
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - FR f
-      - United States f
+      - uk f,m
+      - nl f.m
+      - nl 2 f.m
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - FR f
-      - United States f
+      - uk f,m
+      - nl f.m
+      - nl 2 f.m
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - FR f
-      - United States f
+      - uk f,m
+      - nl f.m
+      - nl 2 f.m
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -90,8 +97,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - FR f
-      - United States f
+      - uk f,m
+      - nl f.m
+      - nl 2 f.m
 
 rules:
 # 本地/局域网地址
