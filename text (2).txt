@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：14-02-2023 13:20:49
+# 创建时间：16-02-2023 23:39:33
 # 使用模版：V2RaySE 默认模版
-# 节点数量：4
+# 节点数量：3
 ####################################
 mixed-port: 7890
 allow-lan: true
@@ -21,67 +21,60 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - {"name":"united kingdom","type":"vmess","server":"cdnjs.com","port":443,"cipher":"auto","uuid":"97be993c-f691-45d1-a41e-feb647ebcb6c","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"floral-thunder-9158.freedomje7e.workers.dev","network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"floral-thunder-9158.freedomje7e.workers.dev"}}}
-  - {"name":"FR vmess","type":"vmess","server":"cdnjs.com","port":443,"cipher":"none","uuid":"410aee20-ac39-11ed-a9d4-1239d0255272","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"cold-firefly-a2cc.freedomje7e.workers.dev","network":"ws","ws-opts":{"path":"/vmws","headers":{"host":"cold-firefly-a2cc.freedomje7e.workers.dev"}}}
-  - {"name":"united kingdom 2","type":"vmess","server":"cdnjs.com","port":443,"cipher":"auto","uuid":"427f26ae-9b74-430f-aba5-3b9222c8874f","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"wandering-feather-8dee.freedomje7e.workers.dev","network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"wandering-feather-8dee.freedomje7e.workers.dev"}}}
-  - {"name":"Germany 1","type":"vmess","server":"cdnjs.com","port":443,"cipher":"auto","uuid":"06529d00-ac3b-11ed-b834-205c6d5f5d78","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"lucky-waterfall-55fa.freedomje7e.workers.dev","network":"ws","ws-opts":{"path":"/p93itcda","headers":{"host":"lucky-waterfall-55fa.freedomje7e.workers.dev"}}}
+  - {"name":"vmess-ws-tls","type":"vmess","server":"104.20.201.67","port":443,"cipher":"auto","uuid":"4f397aa7-af98-4c2c-b80e-4acd32f0659a","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"steep-heart-4060.cloudf335.workers.dev","network":"ws","ws-opts":{"path":"/freevmess","headers":{"host":"steep-heart-4060.cloudf335.workers.dev"}}}
+  - {"name":"443 Vmess Netherlands 1 2023-02-24","type":"vmess","server":"172.67.173.61","port":443,"cipher":"auto","uuid":"d60af310-ae34-11ed-b033-205c6d5f5d78","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"lucky-dust-840d.cloudf335.workers.dev","network":"ws","ws-opts":{"path":"/jazp0br8","headers":{"host":"lucky-dust-840d.cloudf335.workers.dev"}}}
+  - {"name":"443 Vmess United Kingdom  2023-02-24","type":"vmess","server":"172.67.173.61","port":443,"cipher":"auto","uuid":"5ba3f0f0-ae35-11ed-b331-205c6d5f5d78","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"hidden-glitter-280e.cloudf335.workers.dev","network":"ws","ws-opts":{"path":"/q0xt1v8f","headers":{"host":"hidden-glitter-280e.cloudf335.workers.dev"}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - united kingdom
-      - FR vmess
-      - united kingdom 2
-      - Germany 1
+      - vmess-ws-tls
+      - 443 Vmess Netherlands 1 2023-02-24
+      - 443 Vmess United Kingdom  2023-02-24
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - united kingdom
-      - FR vmess
-      - united kingdom 2
-      - Germany 1
+      - vmess-ws-tls
+      - 443 Vmess Netherlands 1 2023-02-24
+      - 443 Vmess United Kingdom  2023-02-24
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - united kingdom
-      - FR vmess
-      - united kingdom 2
-      - Germany 1
+      - vmess-ws-tls
+      - 443 Vmess Netherlands 1 2023-02-24
+      - 443 Vmess United Kingdom  2023-02-24
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - united kingdom
-      - FR vmess
-      - united kingdom 2
-      - Germany 1
+      - vmess-ws-tls
+      - 443 Vmess Netherlands 1 2023-02-24
+      - 443 Vmess United Kingdom  2023-02-24
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - united kingdom
-      - FR vmess
-      - united kingdom 2
-      - Germany 1
+      - vmess-ws-tls
+      - 443 Vmess Netherlands 1 2023-02-24
+      - 443 Vmess United Kingdom  2023-02-24
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - united kingdom
-      - FR vmess
-      - united kingdom 2
-      - Germany 1
+      - vmess-ws-tls
+      - 443 Vmess Netherlands 1 2023-02-24
+      - 443 Vmess United Kingdom  2023-02-24
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -104,10 +97,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - united kingdom
-      - FR vmess
-      - united kingdom 2
-      - Germany 1
+      - vmess-ws-tls
+      - 443 Vmess Netherlands 1 2023-02-24
+      - 443 Vmess United Kingdom  2023-02-24
 
 rules:
 # 本地/局域网地址
