@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：16-02-2023 11:33:30
+# 创建时间：17-02-2023 17:35:21
 # 使用模版：V2RaySE 默认模版
-# 节点数量：3
+# 节点数量：6
 ####################################
 mixed-port: 7890
 allow-lan: true
@@ -21,15 +21,21 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - {"name":"uk f,m","type":"vmess","server":"billowing-frog-b3c6.unknermine.workers.dev","port":443,"cipher":"auto","uuid":"28cf765f-6b7c-45b0-aa64-f021c901ea01","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"blue-fire-4f12.cloudf335.workers.dev","network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"blue-fire-4f12.cloudf335.workers.dev"}}}
-  - {"name":"nl f.m","type":"vmess","server":"billowing-frog-b3c6.unknermine.workers.dev","port":443,"cipher":"auto","uuid":"1a9c943c-46dc-4ebb-96d2-02e21929bc23","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"small-salad-d599.cloudf335.workers.dev","network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"small-salad-d599.cloudf335.workers.dev"}}}
-  - {"name":"nl 2 f.m","type":"vmess","server":"billowing-frog-b3c6.unknermine.workers.dev","port":443,"cipher":"auto","uuid":"1eecacc0-add0-11ed-b233-205c6d5f5d78","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"tiny-flower-3ed0.cloudf335.workers.dev","network":"ws","ws-opts":{"path":"/i8o3ng25","headers":{"host":"tiny-flower-3ed0.cloudf335.workers.dev"}}}
+  - {"name":"USA f.m","type":"vmess","server":"dry-dawn-5743.unknow5ter.workers.dev","port":443,"cipher":"none","uuid":"880b9000-aeca-11ed-b534-205c6d5f5d78","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"solitary-cloud-ca6e.unknow5ter.workers.dev","network":"ws","ws-opts":{"path":"/vmws","headers":{"host":"solitary-cloud-ca6e.unknow5ter.workers.dev"}}}
+  - {"name":"canada f.m","type":"vmess","server":"billowing-frog-b3c6.unknermine.workers.dev","port":443,"cipher":"auto","uuid":"0fcb4c72-0eb7-4ae6-9c04-dc3eb305eecc","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"rapid-disk-88d0.unknow5ter.workers.dev","network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"rapid-disk-88d0.unknow5ter.workers.dev"}}}
+  - {"name":"france f.m\r","type":"vless","server":"billowing-frog-b3c6.unknermine.workers.dev","port":443,"uuid":"4f397aa7-af98-4c2c-b80e-4acd32f0659a","tls":true,"servername":"dry-dawn-5743.unknow5ter.workers.dev","network":"ws","ws-opts":{"path":"/vless","headers":{"host":"dry-dawn-5743.unknow5ter.workers.dev"}}}
+  - {"name":"uk f,m","type":"vmess","server":"billowing-frog-b3c6.unknermine.workers.dev","port":443,"cipher":"auto","uuid":"28cf765f-6b7c-45b0-aa64-f021c901ea01","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"blue-fire-4f12.cloudf335.workers.dev"}}}
+  - {"name":"nl f.m","type":"vmess","server":"billowing-frog-b3c6.unknermine.workers.dev","port":443,"cipher":"auto","uuid":"1a9c943c-46dc-4ebb-96d2-02e21929bc23","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"small-salad-d599.cloudf335.workers.dev"}}}
+  - {"name":"nl 2 f.m","type":"vmess","server":"billowing-frog-b3c6.unknermine.workers.dev","port":443,"cipher":"auto","uuid":"1eecacc0-add0-11ed-b233-205c6d5f5d78","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/i8o3ng25","headers":{"host":"tiny-flower-3ed0.cloudf335.workers.dev"}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - USA f.m
+      - canada f.m
+      - "france f.m\r"
       - uk f,m
       - nl f.m
       - nl 2 f.m
@@ -39,6 +45,9 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - USA f.m
+      - canada f.m
+      - "france f.m\r"
       - uk f,m
       - nl f.m
       - nl 2 f.m
@@ -48,6 +57,9 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - USA f.m
+      - canada f.m
+      - "france f.m\r"
       - uk f,m
       - nl f.m
       - nl 2 f.m
@@ -56,6 +68,9 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - USA f.m
+      - canada f.m
+      - "france f.m\r"
       - uk f,m
       - nl f.m
       - nl 2 f.m
@@ -64,6 +79,9 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - USA f.m
+      - canada f.m
+      - "france f.m\r"
       - uk f,m
       - nl f.m
       - nl 2 f.m
@@ -72,6 +90,9 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - USA f.m
+      - canada f.m
+      - "france f.m\r"
       - uk f,m
       - nl f.m
       - nl 2 f.m
@@ -97,6 +118,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - USA f.m
+      - canada f.m
+      - "france f.m\r"
       - uk f,m
       - nl f.m
       - nl 2 f.m
