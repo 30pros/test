@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：16-02-2023 23:39:33
+# 创建时间：18-02-2023 14:04:33
 # 使用模版：V2RaySE 默认模版
-# 节点数量：3
+# 节点数量：8
 ####################################
 mixed-port: 7890
 allow-lan: true
@@ -21,15 +21,25 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - {"name":"vmess-ws-tls","type":"vmess","server":"104.20.201.67","port":443,"cipher":"auto","uuid":"4f397aa7-af98-4c2c-b80e-4acd32f0659a","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"steep-heart-4060.cloudf335.workers.dev","network":"ws","ws-opts":{"path":"/freevmess","headers":{"host":"steep-heart-4060.cloudf335.workers.dev"}}}
-  - {"name":"443 Vmess Netherlands 1 2023-02-24","type":"vmess","server":"172.67.173.61","port":443,"cipher":"auto","uuid":"d60af310-ae34-11ed-b033-205c6d5f5d78","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"lucky-dust-840d.cloudf335.workers.dev","network":"ws","ws-opts":{"path":"/jazp0br8","headers":{"host":"lucky-dust-840d.cloudf335.workers.dev"}}}
-  - {"name":"443 Vmess United Kingdom  2023-02-24","type":"vmess","server":"172.67.173.61","port":443,"cipher":"auto","uuid":"5ba3f0f0-ae35-11ed-b331-205c6d5f5d78","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"hidden-glitter-280e.cloudf335.workers.dev","network":"ws","ws-opts":{"path":"/q0xt1v8f","headers":{"host":"hidden-glitter-280e.cloudf335.workers.dev"}}}
+  - {"name":"Netherlands 2","type":"vmess","server":"172.67.173.61","port":443,"cipher":"auto","uuid":"016f8cdf-a78f-4979-bb4d-a94ba80e693d","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"morning-dew-1fed.unknow5ter.workers.dev","network":"ws","ws-opts":{"path":"/racevpn","headers":{"host":"morning-dew-1fed.unknow5ter.workers.dev"}}}
+  - {"name":"Netherlands","type":"vmess","server":"172.67.173.61","port":443,"cipher":"auto","uuid":"a86efb6e-8f40-4c80-b179-3068adb41f3c","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"cool-leaf-ea92.unknow5ter.workers.dev","network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"cool-leaf-ea92.unknow5ter.workers.dev"}}}
+  - {"name":"canada","type":"vmess","server":"172.67.173.61","port":443,"cipher":"auto","uuid":"c172a07b-7b03-4d0e-b47e-138428a9c316","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"damp-rice-dd5f.unknow5ter.workers.dev","network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"damp-rice-dd5f.unknow5ter.workers.dev"}}}
+  - {"name":"france","type":"vmess","server":"172.67.173.61","port":443,"cipher":"auto","uuid":"58822836-c500-42b8-a12d-f5866b918345","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"late-cell-73c4.unknow5ter.workers.dev","network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"late-cell-73c4.unknow5ter.workers.dev"}}}
+  - {"name":"france 2","type":"vmess","server":"172.67.173.61","port":443,"cipher":"none","uuid":"58036570-af77-11ed-8674-1239d0255272","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"gentle-darkness-40b7.unknow5ter.workers.dev","network":"ws","ws-opts":{"path":"/vmws","headers":{"host":"gentle-darkness-40b7.unknow5ter.workers.dev"}}}
+  - {"name":"vmess-ws-tls","type":"vmess","server":"104.20.201.67","port":443,"cipher":"auto","uuid":"4f397aa7-af98-4c2c-b80e-4acd32f0659a","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/freevmess","headers":{"host":"steep-heart-4060.cloudf335.workers.dev"}}}
+  - {"name":"443 Vmess Netherlands 1 2023-02-24","type":"vmess","server":"172.67.173.61","port":443,"cipher":"auto","uuid":"d60af310-ae34-11ed-b033-205c6d5f5d78","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/jazp0br8","headers":{"host":"lucky-dust-840d.cloudf335.workers.dev"}}}
+  - {"name":"443 Vmess United Kingdom  2023-02-24","type":"vmess","server":"172.67.173.61","port":443,"cipher":"auto","uuid":"5ba3f0f0-ae35-11ed-b331-205c6d5f5d78","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/q0xt1v8f","headers":{"host":"hidden-glitter-280e.cloudf335.workers.dev"}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - Netherlands 2
+      - Netherlands
+      - canada
+      - france
+      - france 2
       - vmess-ws-tls
       - 443 Vmess Netherlands 1 2023-02-24
       - 443 Vmess United Kingdom  2023-02-24
@@ -39,6 +49,11 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - Netherlands 2
+      - Netherlands
+      - canada
+      - france
+      - france 2
       - vmess-ws-tls
       - 443 Vmess Netherlands 1 2023-02-24
       - 443 Vmess United Kingdom  2023-02-24
@@ -48,6 +63,11 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - Netherlands 2
+      - Netherlands
+      - canada
+      - france
+      - france 2
       - vmess-ws-tls
       - 443 Vmess Netherlands 1 2023-02-24
       - 443 Vmess United Kingdom  2023-02-24
@@ -56,6 +76,11 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - Netherlands 2
+      - Netherlands
+      - canada
+      - france
+      - france 2
       - vmess-ws-tls
       - 443 Vmess Netherlands 1 2023-02-24
       - 443 Vmess United Kingdom  2023-02-24
@@ -64,6 +89,11 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - Netherlands 2
+      - Netherlands
+      - canada
+      - france
+      - france 2
       - vmess-ws-tls
       - 443 Vmess Netherlands 1 2023-02-24
       - 443 Vmess United Kingdom  2023-02-24
@@ -72,6 +102,11 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - Netherlands 2
+      - Netherlands
+      - canada
+      - france
+      - france 2
       - vmess-ws-tls
       - 443 Vmess Netherlands 1 2023-02-24
       - 443 Vmess United Kingdom  2023-02-24
@@ -97,6 +132,11 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - Netherlands 2
+      - Netherlands
+      - canada
+      - france
+      - france 2
       - vmess-ws-tls
       - 443 Vmess Netherlands 1 2023-02-24
       - 443 Vmess United Kingdom  2023-02-24
