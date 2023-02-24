@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：24-02-2023 23:19:04
+# 创建时间：24-02-2023 23:21:27
 # 使用模版：V2RaySE 默认模版
-# 节点数量：6
+# 节点数量：7
 ####################################
 mixed-port: 7890
 allow-lan: true
@@ -21,81 +21,88 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - {"name":"Netherlands","type":"vmess","server":"104.16.52.136","port":443,"cipher":"auto","uuid":"ffbc1720-b47b-11ed-b138-205c6d5f5d78","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"billowing-bar-4422.e421eduer.workers.dev","network":"ws","ws-opts":{"path":"/w5t6ozig","headers":{"host":"billowing-bar-4422.e421eduer.workers.dev"}}}
-  - {"name":"Germany","type":"vmess","server":"104.16.49.187","port":443,"cipher":"auto","uuid":"8094adc0-b478-11ed-b935-205c6d5f5d78","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"morning-glade-e55e.e421eduer.workers.dev","network":"ws","ws-opts":{"path":"/8gw2n564","headers":{"host":"morning-glade-e55e.e421eduer.workers.dev"}}}
+  - {"name":"Germany_1","type":"vmess","server":"104.27.70.80","port":443,"cipher":"auto","uuid":"afc28d78-5c96-4d78-bd54-a3030dc02383","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"wandering-recipe-4e4d.e421eduer.workers.dev","network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"wandering-recipe-4e4d.e421eduer.workers.dev"}}}
+  - {"name":"Germany_2","type":"vmess","server":"104.16.49.187","port":443,"cipher":"auto","uuid":"8094adc0-b478-11ed-b935-205c6d5f5d78","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"morning-glade-e55e.e421eduer.workers.dev","network":"ws","ws-opts":{"path":"/8gw2n564","headers":{"host":"morning-glade-e55e.e421eduer.workers.dev"}}}
   - {"name":"london 2","type":"vmess","server":"104.17.4.229","port":443,"cipher":"auto","uuid":"dcf3f310-b478-11ed-b530-205c6d5f5d78","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"morning-disr-p9.e421eduer.workers.dev","network":"ws","ws-opts":{"path":"/mnhkibqy","headers":{"host":"morning-disr-p9.e421eduer.workers.dev"}}}
   - {"name":"germany 2","type":"vmess","server":"104.17.4.229","port":443,"cipher":"none","uuid":"7fbf9290-b479-11ed-83ec-1239d0255272","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"purple-limit-3195.e421eduer.workers.dev","network":"ws","ws-opts":{"path":"/vmws","headers":{"host":"purple-limit-3195.e421eduer.workers.dev"}}}
   - {"name":"france","type":"vmess","server":"104.17.69.124","port":443,"cipher":"none","uuid":"dc52eef0-b479-11ed-a8af-1239d0255272","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"shrill-bush-266c.e421eduer.workers.dev","network":"ws","ws-opts":{"path":"/vmws","headers":{"host":"shrill-bush-266c.e421eduer.workers.dev"}}}
   - {"name":"usa","type":"vmess","server":"104.16.44.38","port":443,"cipher":"none","uuid":"618ef6c0-b47a-11ed-b332-205c6d5f5d78","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"shrill-bush-266c.e421eduer.workers.dev","network":"ws","ws-opts":{"path":"/vmws","headers":{"host":"shrill-bush-266c.e421eduer.workers.dev"}}}
+  - {"name":"Netherlands","type":"vmess","server":"104.16.52.136","port":443,"cipher":"auto","uuid":"ffbc1720-b47b-11ed-b138-205c6d5f5d78","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"billowing-bar-4422.e421eduer.workers.dev","network":"ws","ws-opts":{"path":"/w5t6ozig","headers":{"host":"billowing-bar-4422.e421eduer.workers.dev"}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - Netherlands
-      - Germany
+      - Germany_1
+      - Germany_2
       - london 2
       - germany 2
       - france
       - usa
+      - Netherlands
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - Netherlands
-      - Germany
+      - Germany_1
+      - Germany_2
       - london 2
       - germany 2
       - france
       - usa
+      - Netherlands
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - Netherlands
-      - Germany
+      - Germany_1
+      - Germany_2
       - london 2
       - germany 2
       - france
       - usa
+      - Netherlands
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - Netherlands
-      - Germany
+      - Germany_1
+      - Germany_2
       - london 2
       - germany 2
       - france
       - usa
+      - Netherlands
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - Netherlands
-      - Germany
+      - Germany_1
+      - Germany_2
       - london 2
       - germany 2
       - france
       - usa
+      - Netherlands
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - Netherlands
-      - Germany
+      - Germany_1
+      - Germany_2
       - london 2
       - germany 2
       - france
       - usa
+      - Netherlands
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -118,12 +125,13 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - Netherlands
-      - Germany
+      - Germany_1
+      - Germany_2
       - london 2
       - germany 2
       - france
       - usa
+      - Netherlands
 
 rules:
 # 本地/局域网地址
