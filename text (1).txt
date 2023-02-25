@@ -1,61 +1,256 @@
-
 port: 7890
 socks-port: 7891
 redir-port: 7892
 mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
 mode: rule
 log-level: silent
 allow-lan: true
 external-controller: 0.0.0.0:9090
+secret: ""
 bind-address: "*"
-ipv6: false
+unified-delay: true
+profile:
+  store-selected: true
+  store-fake-ip: true
 dns:
   enable: true
   ipv6: false
-  enhanced-mode: redir-host
-  listen: 0.0.0.0:7894
-  fallback-filter:
-    geoip: false
-    ipcidr:
-    - 240.0.0.0/4
+  use-host: true
+  enhanced-mode: fake-ip
+  listen: 0.0.0.0:7874
   nameserver:
-    - https://puredns.org/dns-query
-    - tls://puredns.org:853
+    - 8.8.8.8
+    - 1.0.0.1
+    - https://dns.google/dns-query
   fallback:
-    - tcp://108.137.44.39
-    - tcp://108.137.44.9
-    - 108.137.44.39
-    - 108.137.44.9
-tun:
-  enable: true
-  stack: system 
-  macOS-auto-route: true
-  macOS-auto-detect-interface: true
-  dns-hijack:
-    - tcp://108.137.44.39:53
-experimental:
-  interface-name: en0
-
+    - 1.1.1.1
+    - 8.8.4.4
+    - https://cloudflare-dns.com/dns-query
+    - 112.215.203.254
+  default-nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+    - 112.215.203.254
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - "*.time.edu.cn"
+    - "*.ntp.org.cn"
+    - +.pool.ntp.org
+    - time1.cloud.tencent.com
+    - music.163.com
+    - "*.music.163.com"
+    - "*.126.net"
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - "*.kuwo.cn"
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - y.qq.com
+    - "*.y.qq.com"
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - "*.xiami.com"
+    - "*.music.migu.cn"
+    - music.migu.cn
+    - "*.msftconnecttest.com"
+    - "*.msftncsi.com"
+    - msftconnecttest.com
+    - msftncsi.com
+    - localhost.ptlogin2.qq.com
+    - localhost.sec.qq.com
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - xbox.*.microsoft.com
+    - xnotify.xboxlive.com
+    - +.battlenet.com.cn
+    - +.wotgame.cn
+    - +.wggames.cn
+    - +.wowsgame.cn
+    - +.wargaming.net
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - +.stun.*.*
+    - +.stun.*.*.*
+    - +.stun.*.*.*.*
+    - heartbeat.belkin.com
+    - "*.linksys.com"
+    - "*.linksyssmartwifi.com"
+    - "*.router.asus.com"
+    - mesu.apple.com
+    - swscan.apple.com
+    - swquery.apple.com
+    - swdownload.apple.com
+    - swcdn.apple.com
+    - swdist.apple.com
+    - lens.l.google.com
+    - stun.l.google.com
+    - +.nflxvideo.net
+    - "*.square-enix.com"
+    - "*.finalfantasyxiv.com"
+    - "*.ffxiv.com"
+    - "*.mcdn.bilivideo.cn"
+    - +.media.dssott.com
 proxies:
-  - {name: Germany, server: 104.27.70.80, port: 443, type: vmess, uuid: afc28d78-5c96-4d78-bd54-a3030dc02383, sni: wandering-recipe-4e4d.e421eduer.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: wandering-recipe-4e4d.e421eduer.workers.dev}}}
-  - {name: Germany 51, server: 104.16.49.187, port: 443, type: vmess, uuid: 8094adc0-b478-11ed-b935-205c6d5f5d78, sni: morning-glade-e55e.e421eduer.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /8gw2n564, headers: {Host: morning-glade-e55e.e421eduer.workers.dev}}}
-  - {name: london 2, server: 104.17.4.229, port: 443, type: vmess, uuid: dcf3f310-b478-11ed-b530-205c6d5f5d78, sni: morning-disr-p9.e421eduer.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /mnhkibqy, headers: {Host: morning-disr-p9.e421eduer.workers.dev}}}
-  - {name: germany 2, server: 104.17.4.229, port: 443, type: vmess, uuid: 7fbf9290-b479-11ed-83ec-1239d0255272, sni: purple-limit-3195.e421eduer.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmws, headers: {Host: purple-limit-3195.e421eduer.workers.dev}}}
-  - {name: france, server: 104.17.69.124, port: 443, type: vmess, uuid: dc52eef0-b479-11ed-a8af-1239d0255272, sni: shrill-bush-266c.e421eduer.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmws, headers: {Host: shrill-bush-266c.e421eduer.workers.dev}}}
-  - {name: usa, server: 104.16.44.38, port: 443, type: vmess, uuid: 618ef6c0-b47a-11ed-b332-205c6d5f5d78, sni: shrill-bush-266c.e421eduer.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmws, headers: {Host: shrill-bush-266c.e421eduer.workers.dev}}}
-  - {name: Netherlands, server: 104.16.52.136, port: 443, type: vmess, uuid: ffbc1720-b47b-11ed-b138-205c6d5f5d78, sni: billowing-bar-4422.e421eduer.workers.dev, alterId: 0, cipher: auto, tls: 1, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /w5t6ozig, headers: {Host: billowing-bar-4422.e421eduer.workers.dev}}}
-
+  - name: Germany
+    server: 104.16.49.187
+    port: 443
+    type: vmess
+    uuid: 8094adc0-b478-11ed-b935-205c6d5f5d78
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: morning-glade-e55e.e421eduer.workers.dev
+    network: ws
+    ws-opts:
+      path: /8gw2n564
+      headers:
+        Host: morning-glade-e55e.e421eduer.workers.dev
+    udp: true
+  - name: london 2
+    server: 104.17.4.229
+    port: 443
+    type: vmess
+    uuid: dcf3f310-b478-11ed-b530-205c6d5f5d78
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: morning-disr-p9.e421eduer.workers.dev
+    network: ws
+    ws-opts:
+      path: /mnhkibqy
+      headers:
+        Host: morning-disr-p9.e421eduer.workers.dev
+    udp: true
+  - name: germany 2
+    server: 104.17.4.229
+    port: 443
+    type: vmess
+    uuid: 7fbf9290-b479-11ed-83ec-1239d0255272
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: purple-limit-3195.e421eduer.workers.dev
+    network: ws
+    ws-opts:
+      path: /vmws
+      headers:
+        Host: purple-limit-3195.e421eduer.workers.dev
+    udp: true
+  - name: france
+    server: 104.17.69.124
+    port: 443
+    type: vmess
+    uuid: dc52eef0-b479-11ed-a8af-1239d0255272
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: shrill-bush-266c.e421eduer.workers.dev
+    network: ws
+    ws-opts:
+      path: /vmws
+      headers:
+        Host: shrill-bush-266c.e421eduer.workers.dev
+    udp: true
+  - name: usa
+    server: 104.16.44.38
+    port: 443
+    type: vmess
+    uuid: 618ef6c0-b47a-11ed-b332-205c6d5f5d78
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: shrill-bush-266c.e421eduer.workers.dev
+    network: ws
+    ws-opts:
+      path: /vmws
+      headers:
+        Host: shrill-bush-266c.e421eduer.workers.dev
+    udp: true
+  - name: Netherlands
+    server: 104.16.52.136
+    port: 443
+    type: vmess
+    uuid: ffbc1720-b47b-11ed-b138-205c6d5f5d78
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: billowing-bar-4422.e421eduer.workers.dev
+    network: ws
+    ws-opts:
+      path: /w5t6ozig
+      headers:
+        Host: billowing-bar-4422.e421eduer.workers.dev
+    udp: true
+  - name: Germany 2
+    server: 104.27.70.80
+    port: 443
+    type: vmess
+    uuid: afc28d78-5c96-4d78-bd54-a3030dc02383
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: wandering-recipe-4e4d.e421eduer.workers.dev
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: wandering-recipe-4e4d.e421eduer.workers.dev
+    udp: true
 proxy-groups:
-  - name: sshkit-generator
+  - name: FASTSSH-SSHKIT-HOWDY
     type: select
     proxies:
       - Germany
-      - Germany 51
       - london 2
       - germany 2
       - france
       - usa
       - Netherlands
-
+      - Germany 2
+      - DIRECT
 rules:
- - MATCH,sshkit-generator
+  - MATCH,FASTSSH-SSHKIT-HOWDY
